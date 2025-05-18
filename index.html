@@ -16,9 +16,13 @@
     header img { max-width:200px; margin-bottom:1rem; }
     h1 { font-family:'Playfair Display',serif; font-size:2.5rem; color:var(--teal); margin-bottom:0.5rem; }
     h2 { font-family:'Playfair Display',serif; color:var(--teal); margin-top:2rem; }
-    .glossary-term { font-weight:700; margin-top:1rem; }
+    .glossary-term { font-weight:700; margin-top:1rem; color: var(--teal); cursor: pointer; text-decoration: underline dotted; }
     .definition { margin-left:1rem; }
-    .example { font-style:italic; margin-left:2rem; }
+    .example { font-style:italic; margin-left:2rem; color: #666; }
+    .modal-term { font-weight: bold; color: var(--teal); }
+    .alphabet-nav { display: flex; justify-content: center; flex-wrap: wrap; margin: 1rem 0; }
+    .alphabet-nav a { margin: 0 0.5rem; color: var(--teal); text-decoration: none; }
+    .alphabet-nav a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -51,212 +55,199 @@
     <header>
       <img src="pyleaMUNfinallogo.png" alt="Logo">
       <h1>Agenda Glossary</h1>
-      <p class="text-muted">Key terms you’ll encounter in each committee’s background and resolutions.</p>
+      <p class="text-muted">Key terms you'll encounter in each committee's background and resolutions. Click any term for definition.</p>
     </header>
 
-    <!-- Verbs -->
-    <h2>Verbs</h2>
-    <dl>
-      <dt class="glossary-term">Co-design</dt>
-      <dd class="definition">To collaboratively design a product, service, or policy—involving end-users (e.g., youth, communities) directly in the creation process.</dd>
-      <dd class="example">“WHO will co-design apps with adolescents offering screening tools and crisis chat lines.”</dd>
+    <!-- Alphabet Navigation -->
+    <div class="alphabet-nav">
+      <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> 
+      <a href="#E">E</a> <a href="#F">G</a> <a href="#H">H</a> <a href="#I">I</a> 
+      <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> 
+      <a href="#N">N</a> <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> 
+      <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> <a href="#U">U</a> 
+      <a href="#V">V</a> <a href="#W">W</a> <a href="#X">X</a> <a href="#Y">Y</a> 
+      <a href="#Z">Z</a>
+    </div>
 
-      <dt class="glossary-term">Convert</dt>
-      <dd class="definition">To change the function or use of an existing facility or asset.</dd>
-      <dd class="example">“Convert libraries and community centers into ICT hubs offering structured after-school digital literacy programs and parental engagement sessions.”</dd>
+    <!-- Glossary Terms -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2 id="A">A</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Accelerator Networks" data-definition="Programs or organizations that mentor and provide resources (e.g., funding, prototyping) to early-stage startups." data-example="'Incubators and accelerator networks facilitate prototyping and investor-pitch events.'">Accelerator Networks</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Age-Appropriate" data-definition="Suited in content and complexity to a specific developmental or age group." data-example="'Integrate age-appropriate consent modules into secondary-school curricula.'">Age-Appropriate</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Air-Refueling" data-definition="Capability for aircraft to receive fuel mid-flight, extending operational range critical to force projection." data-example="'Joint procurement of air-refueling assets can lower costs and enhance readiness.'">Air-Refueling</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Arms Trade Treaty (ATT)" data-definition="A global agreement to regulate international trade in conventional arms and prevent illicit transfers." data-example="'Promote universal ratification and implementation of the Arms Trade Treaty.'">Arms Trade Treaty (ATT)</dt>
+        </dl>
 
-      <dt class="glossary-term">Curate</dt>
-      <dd class="definition">To select, organize, and present resources or content with expert care, ensuring relevance and quality.</dd>
-      <dd class="example">“UNESCO will curate open educational resources aligned with national standards.”</dd>
+        <h2 id="B">B</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Ballistic Intelligence" data-definition="Data on the trajectories, origins, and impacts of projectiles used to trace illicit arms transfers." data-example="'Regional tracking centers share ballistic intelligence and interdiction alerts.'">Ballistic Intelligence</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Buffer Zone" data-definition="A transitional area around a core protected site designed to cushion external pressures (e.g., development, tourism)." data-example="'The buffer zone around the biosphere reserve restricts high-density housing.'">Buffer Zone</dt>
+        </dl>
 
-      <dt class="glossary-term">Deploy</dt>
-      <dd class="definition">To position or activate resources strategically (e.g., personnel, technology) in an operational context.</dd>
-      <dd class="example">“Deploy remote sensing and on-site sensors to track ecological indicators.”</dd>
+        <h2 id="C">C</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Carrying Capacity" data-definition="The maximum number of visitors or uses an environment or site can sustain without unacceptable degradation." data-example="'Caps based on scientifically assessed carrying capacities ensure site preservation.'">Carrying Capacity</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Closely" data-definition="With careful or detailed attention and coordination." data-example="'Regulators will monitor sandbox progress closely to identify risks.'">Closely</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Co-design" data-definition="To collaboratively design a product, service, or policy—involving end-users (e.g., youth, communities) directly in the creation process." data-example="'WHO will co-design apps with adolescents offering screening tools and crisis chat lines.'">Co-design</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Community Tech Hub" data-definition="A local center (often a library or community hall) offering ICT access, training, and after-school programs." data-example="'Convert libraries into community tech hubs offering structured digital-literacy sessions.'">Community Tech Hub</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Community-Led" data-definition="Driven and managed by local community members, leveraging indigenous knowledge and ownership." data-example="'Community-led stewardship ensures cultural authenticity in heritage management.'">Community-Led</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Convert" data-definition="To change the function or use of an existing facility or asset." data-example="'Convert libraries and community centers into ICT hubs offering structured digital-literacy programs.'">Convert</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Curate" data-definition="To select, organize, and present resources or content with expert care, ensuring relevance and quality." data-example="'UNESCO will curate open educational resources aligned with national curricula.'">Curate</dt>
+        </dl>
+      </div>
 
-      <dt class="glossary-term">Embed</dt>
-      <dd class="definition">To integrate an element deeply within a system or institution.</dd>
-      <dd class="example">“Embed trained counselors in schools with defined student-to-counselor ratios.”</dd>
+      <div class="col-md-4">
+        <h2 id="D">D</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Deploy" data-definition="To position or activate resources, technology, or personnel strategically, often in response to emerging needs." data-example="'Deploy remote-sensing and on-site sensors to track visitor movements and ecological indicators in real time.'">Deploy</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Digital Micro-Stamping" data-definition="Microscopic, unique identifiers embedded on weapons or parts to enable forensic tracing and chain-of-custody." data-example="'Customs officials use handheld readers to decode micro-stamps on seized components.'">Digital Micro-Stamping</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Digital Pedagogy" data-definition="Teaching practices and methodologies adapted for digital or blended-learning environments." data-example="'Implement UNESCO-certified 'Digital Pedagogy' courses combining workshops and mentorship.'">Digital Pedagogy</dt>
+        </dl>
 
-      <dt class="glossary-term">Establish</dt>
-      <dd class="definition">To found or institute on a firm basis.</dd>
-      <dd class="example">“Establish local cooperatives to manage tours, accommodation, and interpretation centers.”</dd>
+        <h2 id="E">E</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="E-Learning Platform" data-definition="Software or web-based system delivering educational content and interactive learning tools remotely." data-example="'Fund satellite-based e-learning platforms and psychosocial support programs for Gaza students.'">E-Learning Platform</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Embed" data-definition="To integrate an element deeply within a system or process so it becomes inseparable from the whole." data-example="'Embed trained counselors in schools with defined student-to-counselor ratios.'">Embed</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Establish" data-definition="To found or institute on a firm, often legal or organizational, basis." data-example="'Establish local cooperatives to manage tours and ensure revenue-sharing in heritage sites.'">Establish</dt>
+        </dl>
 
-      <dt class="glossary-term">Foster</dt>
-      <dd class="definition">To encourage or promote the development of something.</dd>
-      <dd class="example">“Public–private partnerships can foster solar-powered classrooms.”</dd>
+        <h2 id="F">F</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Foster" data-definition="To encourage or promote the development of initiatives, relationships, or innovations." data-example="'Public-private partnerships can foster solar-powered classrooms in remote regions.'">Foster</dt>
+        </dl>
 
-      <dt class="glossary-term">Harmonize</dt>
-      <dd class="definition">To align rules or standards across jurisdictions or organizations.</dd>
-      <dd class="example">“Harmonize national legislation with the Arms Trade Treaty (ATT).”</dd>
+        <h2 id="G">G</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Green Infrastructure" data-definition="Construction and systems using renewable or low-impact materials (e.g., solar panels, rain gardens)." data-example="'Incentivize green infrastructure through tax breaks or micro-grants.'">Green Infrastructure</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Green Startup Funds" data-definition="Financial resources specifically allocated to support environmentally sustainable business ventures." data-example="'Establish youth-focused green startup funds with concessional rates.'">Green Startup Funds</dt>
+        </dl>
 
-      <dt class="glossary-term">Implement</dt>
-      <dd class="definition">To put into effect according to a plan or policy.</dd>
-      <dd class="example">“Implement timed-entry systems and caps based on carrying-capacity studies.”</dd>
+        <h2 id="H">H</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Harmonize" data-definition="To align rules, standards, or practices across jurisdictions to reduce conflicts and loopholes." data-example="'Harmonize national legislation with the Arms Trade Treaty to close transfer and brokering gaps.'">Harmonize</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Humanitarian Corridor" data-definition="A negotiated safe passage—land, sea, or air—through conflict or disaster zones to deliver aid or evacuate civilians." data-example="'Establish UN-monitored humanitarian corridors for medical evacuations in Gaza.'">Humanitarian Corridor</dt>
+        </dl>
+      </div>
 
-      <dt class="glossary-term">Incentivize</dt>
-      <dd class="definition">To motivate or encourage through incentives or rewards.</dd>
-      <dd class="example">“Tax breaks can incentivize low-impact materials and renewable-energy installations.”</dd>
+      <div class="col-md-4">
+        <h2 id="I">I</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Implement" data-definition="To put into effect according to a plan—coordinating stakeholders, resources, and procedures." data-example="'Implement timed-entry systems and caps based on scientifically assessed carrying capacities.'">Implement</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Incentivize" data-definition="To motivate through incentives—grants, tax breaks, recognition—or other inducements." data-example="'Tax breaks can incentivize low-impact materials in green-infrastructure projects.'">Incentivize</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Innovation Sprint" data-definition="A focused, time-bound collaboration (often cross-border) to prototype and test new solutions rapidly." data-example="'Facilitate cross-border innovation sprints to stimulate collaboration and knowledge transfer.'">Innovation Sprint</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="ISR (Intelligence, Surveillance, Reconnaissance)" data-definition="Military capabilities for gathering and analyzing information about enemy forces or areas of operations." data-example="'Europe lags in ISR capabilities compared to U.S. assets.'">ISR (Intelligence, Surveillance, Reconnaissance)</dt>
+        </dl>
 
-      <dt class="glossary-term">Monitor</dt>
-      <dd class="definition">To systematically observe and check progress or quality over time.</dd>
-      <dd class="example">“Monitor corridor usage with ceasefire observers in real time.”</dd>
+        <h2 id="L">L</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Low-Impact" data-definition="Designed to cause minimal environmental disturbance or carbon footprint." data-example="'Specify low-impact lighting to protect nocturnal wildlife corridors.'">Low-Impact</dt>
+        </dl>
 
-      <dt class="glossary-term">Negotiate</dt>
-      <dd class="definition">To discuss terms and reach mutually acceptable agreements.</dd>
-      <dd class="example">“Negotiate a new Strategic Compass delineating EU and NATO roles.”</dd>
+        <h2 id="M">M</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Monitor" data-definition="To systematically observe and check the progress or quality of a process over time." data-example="'Monitor corridor usage with ceasefire observers to ensure unimpeded aid delivery.'">Monitor</dt>
+        </dl>
 
-      <dt class="glossary-term">Pool</dt>
-      <dd class="definition">To combine resources into a joint mechanism for greater efficiency.</dd>
-      <dd class="example">“Pool procurement for air-refueling and strategic transport assets.”</dd>
+        <h2 id="N">N</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Negotiate" data-definition="To discuss terms and reach an agreement, often in diplomatic or contractual contexts." data-example="'Negotiate a new Strategic Compass that delineates EU and NATO roles.'">Negotiate</dt>
+        </dl>
 
-      <dt class="glossary-term">Reassess</dt>
-      <dd class="definition">To evaluate again with new information or changing circumstances.</dd>
-      <dd class="example">“Reassess NATO’s strategic autonomy amid fluctuating U.S. security assurances.”</dd>
-    </dl>
+        <h2 id="O">O</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Open Educational Resource (OER)" data-definition="Freely licensed teaching and learning materials that anyone can use, adapt, and redistribute." data-example="'Curate and localize OER curricula in multiple vernacular languages.'">Open Educational Resource (OER)</dt>
+        </dl>
 
-    <!-- Nouns & Noun Phrases -->
-    <h2>Nouns &amp; Noun Phrases</h2>
-    <dl>
-      <dt class="glossary-term">Accelerator Networks</dt>
-      <dd class="definition">Programs or organizations that mentor and provide resources (e.g., funding, prototyping) to early-stage startups.</dd>
-      <dd class="example">“Incubators and accelerator networks facilitate prototyping and investor-pitch events.”</dd>
+        <h2 id="P">P</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Peer-Support Network" data-definition="A group in which individuals with shared experiences provide mutual emotional and practical assistance." data-example="'Launch peer-support networks supervised by health professionals.'">Peer-Support Network</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Pool" data-definition="To combine resources—funds, procurement, or data—into a joint mechanism for greater scale and efficiency." data-example="'Pool procurement for air-refueling and strategic transport under joint EU initiatives.'">Pool</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Psychoeducation Module" data-definition="A structured educational unit teaching psychological concepts, coping strategies, and self-management skills." data-example="'A psychoeducation module includes CBT-based worksheets and guided breathing exercises.'">Psychoeducation Module</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="PESCO (Permanent Structured Cooperation)" data-definition="An EU defense initiative for deeper cooperation among member states in capability development and operational readiness." data-example="'Deepen coordinated planning through PESCO and the European Defence Fund.'">PESCO (Permanent Structured Cooperation)</dt>
+        </dl>
+      </div>
+    </div>
 
-      <dt class="glossary-term">Air-Refueling</dt>
-      <dd class="definition">The capability for aircraft to receive fuel mid-flight, extending operational range.</dd>
-      <dd class="example">“Joint procurement of air-refueling assets can lower costs and enhance readiness.”</dd>
+    <!-- More columns would continue here with remaining letters -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2 id="R">R</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Real-Time" data-definition="Occurring instantaneously as events unfold, with minimal delay." data-example="'Real-time analytics of footfall patterns inform on-the-fly visitor-management adjustments.'">Real-Time</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Reassess" data-definition="To evaluate again, often in light of new information or changing circumstances." data-example="'Reassess NATO's strategic autonomy amid fluctuating U.S. security assurances.'">Reassess</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Regulatory Sandbox" data-definition="A controlled environment where innovators can test new products/services under relaxed regulations and oversight." data-example="'Create a time-bound regulatory sandbox for green startups with safety safeguards.'">Regulatory Sandbox</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Remote Sensing" data-definition="The acquisition of environmental data via non-contact sensors (satellite, drone) for large-scale monitoring." data-example="'Use multispectral remote sensing to detect deforestation hotspots.'">Remote Sensing</dt>
+        </dl>
+      </div>
 
-      <dt class="glossary-term">Arms Trade Treaty (ATT)</dt>
-      <dd class="definition">A global agreement to regulate the international trade in conventional arms.</dd>
-      <dd class="example">“Promote universal ratification and implementation of the ATT.”</dd>
+      <div class="col-md-4">
+        <h2 id="S">S</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Strategic Autonomy" data-definition="The capacity to plan and act—militarily or diplomatically—independently of external alliances." data-example="'Reassessing NATO's strategic autonomy addresses reliance on U.S. security guarantees.'">Strategic Autonomy</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Strategic Compass" data-definition="A proposed political framework delineating roles and responsibilities between the EU and NATO." data-example="'Negotiate a Strategic Compass to preserve both autonomy and Article 5 solidarity.'">Strategic Compass</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Strategic Sealift" data-definition="Maritime capability (ships, ports, networks) dedicated to transporting heavy military or humanitarian cargo globally." data-example="'Charter commercial roll-on/roll-off vessels to supplement national sealift during maneuvers.'">Strategic Sealift</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Sustainable" data-definition="Meeting present needs without compromising future generations' ability to meet theirs." data-example="'Adopt sustainable-mobility plans integrating bike lanes and electric buses.'">Sustainable</dt>
+        </dl>
+      </div>
 
-      <dt class="glossary-term">Ballistic Intelligence</dt>
-      <dd class="definition">Data and analysis used to trace the origin and movement of ballistic weapons.</dd>
-      <dd class="example">“Regional tracking centers share ballistic intelligence to intercept illicit arms.”</dd>
+      <div class="col-md-4">
+        <h2 id="T">T</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Time-Bound" data-definition="Having explicit start and end dates or deadlines for monitoring and accountability." data-example="'The regulatory sandbox operates on a time-bound six-month pilot.'">Time-Bound</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Timed-Entry System" data-definition="A booking system assigning visitors specific time slots to spread arrivals and reduce congestion." data-example="'Timed-entry systems cut peak-hour queues at heritage sites by up to 60%.'">Timed-Entry System</dt>
+        </dl>
 
-      <dt class="glossary-term">Buffer Zone</dt>
-      <dd class="definition">A transitional area around a core site that limits human activity to protect sensitive resources.</dd>
-      <dd class="example">“Create buffer zones with graduated access levels around heritage sites.”</dd>
+        <h2 id="U">U</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Universally" data-definition="In a manner that applies across all relevant parties or cases without exception." data-example="'Aim for universally ratified standards to close governance loopholes.'">Universally</dt>
+        </dl>
 
-      <dt class="glossary-term">Carrying Capacity</dt>
-      <dd class="definition">The maximum sustainable number of visitors or users without causing degradation.</dd>
-      <dd class="example">“Caps based on scientifically assessed carrying capacities ensure site preservation.”</dd>
-
-      <dt class="glossary-term">Community Tech Hub</dt>
-      <dd class="definition">A local center providing ICT access, training, and support to community members.</dd>
-      <dd class="example">“Convert libraries into community tech hubs offering digital-literacy sessions.”</dd>
-
-      <dt class="glossary-term">Digital Micro-Stamping</dt>
-      <dd class="definition">Embedding unique digital identifiers on weapons for forensic tracing.</dd>
-      <dd class="example">“Customs officials use handheld readers to decode micro-stamps.”</dd>
-
-      <dt class="glossary-term">Digital Pedagogy</dt>
-      <dd class="definition">Teaching methodologies optimized for digital or blended learning environments.</dd>
-      <dd class="example">“Implement UNESCO-certified ‘Digital Pedagogy’ courses for educators.”</dd>
-
-      <dt class="glossary-term">E-Learning Platform</dt>
-      <dd class="definition">A web-based system enabling remote or blended learning with interactive tools.</dd>
-      <dd class="example">“Fund satellite-based e-learning platforms in remote regions.”</dd>
-
-      <dt class="glossary-term">Green Infrastructure</dt>
-      <dd class="definition">Renewable or low-impact construction and technology solutions that reduce environmental footprints.</dd>
-      <dd class="example">“Incentivize green infrastructure through tax breaks and micro-grants.”</dd>
-
-      <dt class="glossary-term">Humanitarian Corridor</dt>
-      <dd class="definition">A safe passage designated for the delivery of aid or evacuation of civilians in conflict zones.</dd>
-      <dd class="example">“Establish UN-monitored humanitarian corridors for medical evacuation.”</dd>
-
-      <dt class="glossary-term">Innovation Sprint</dt>
-      <dd class="definition">A focused, time-bound period of collaboration aimed at rapid prototyping and problem-solving.</dd>
-      <dd class="example">“Facilitate cross-border innovation sprints to stimulate green-tech collaboration.”</dd>
-
-      <dt class="glossary-term">Open Educational Resource</dt>
-      <dd class="definition">Freely licensed teaching and learning materials that can be reused and adapted.</dd>
-      <dd class="example">“Curate and localize OER curricula aligned with national standards.”</dd>
-
-      <dt class="glossary-term">Peer-Support Network</dt>
-      <dd class="definition">A group in which members provide mutual emotional and practical support.</dd>
-      <dd class="example">“Launch peer-support networks supervised by trained professionals in schools.”</dd>
-
-      <dt class="glossary-term">Psychoeducation Module</dt>
-      <dd class="definition">An educational unit designed to teach psychological concepts and coping strategies.</dd>
-      <dd class="example">“A psychoeducation module includes CBT-based worksheets and video tutorials.”</dd>
-
-      <dt class="glossary-term">Regulatory Sandbox</dt>
-      <dd class="definition">A controlled environment where new products or services can be tested under relaxed regulations.</dd>
-      <dd class="example">“Create a time-bound regulatory sandbox with compliance oversight.”</dd>
-
-      <dt class="glossary-term">Remote Sensing</dt>
-      <dd class="definition">The acquisition of information about an object or area from a distance, typically via satellites or drones.</dd>
-      <dd class="example">“Use multispectral remote sensing to detect deforestation hotspots.”</dd>
-
-      <dt class="glossary-term">Strategic Autonomy</dt>
-      <dd class="definition">The ability to plan, decide, and act without reliance on external allies.</dd>
-      <dd class="example">“Reassessing NATO’s strategic autonomy amid U.S. unpredictability.”</dd>
-
-      <dt class="glossary-term">Strategic Compass</dt>
-      <dd class="definition">A framework that delineates roles and responsibilities for coordinated action.</dd>
-      <dd class="example">“Negotiate a Strategic Compass to clarify EU and NATO roles.”</dd>
-
-      <dt class="glossary-term">Strategic Sealift</dt>
-      <dd class="definition">Maritime capability for transporting large or heavy cargo over long distances.</dd>
-      <dd class="example">“Charter roll-on/roll-off vessels to enhance strategic sealift capacity.”</dd>
-
-      <dt class="glossary-term">Timed-Entry System</dt>
-      <dd class="definition">A booking mechanism that assigns visitors specific time slots to control crowds.</dd>
-      <dd class="example">“Timed-entry systems cut peak-hour queues at heritage sites.”</dd>
-
-      <dt class="glossary-term">Youth Ambassador</dt>
-      <dd class="definition">A young representative chosen to convey peer perspectives and lead outreach.</dd>
-      <dd class="example">“Local youth ambassadors help destigmatize mental-health care.”</dd>
-    </dl>
-
-    <!-- Adjectives -->
-    <h2>Adjectives</h2>
-    <dl>
-      <dt class="glossary-term">Age-Appropriate</dt>
-      <dd class="definition">Content or approaches suited in complexity and focus to a specific developmental group.</dd>
-      <dd class="example">“Integrate age-appropriate consent modules into secondary-school curricula.”</dd>
-
-      <dt class="glossary-term">Community-Led</dt>
-      <dd class="definition">Initiatives driven and managed by local community members to ensure ownership.</dd>
-      <dd class="example">“Community-led stewardship ensures authenticity in heritage conservation.”</dd>
-
-      <dt class="glossary-term">Low-Impact</dt>
-      <dd class="definition">Causing minimal disturbance to the environment or community.</dd>
-      <dd class="example">“Specify low-impact lighting and materials in infrastructure plans.”</dd>
-
-      <dt class="glossary-term">Sustainable</dt>
-      <dd class="definition">Meeting present needs without compromising the ability of future generations to meet theirs.</dd>
-      <dd class="example">“Adopt sustainable-mobility plans around urban heritage sites.”</dd>
-
-      <dt class="glossary-term">Time-Bound</dt>
-      <dd class="definition">Having explicit deadlines or defined duration.</dd>
-      <dd class="example">“The regulatory sandbox operates on a time-bound pilot of six months.”</dd>
-
-      <dt class="glossary-term">Youth-Centric</dt>
-      <dd class="definition">Designed around the needs, preferences, and participation of young people.</dd>
-      <dd class="example">“Develop youth-centric blended-finance instruments for green startups.”</dd>
-    </dl>
-
-    <!-- Adverbs -->
-    <h2>Adverbs</h2>
-    <dl>
-      <dt class="glossary-term">Closely</dt>
-      <dd class="definition">With careful or detailed attention and coordination.</dd>
-      <dd class="example">“Regulators will monitor sandbox progress closely to identify risks.”</dd>
-
-      <dt class="glossary-term">Real-Time</dt>
-      <dd class="definition">Occurring instantaneously as events unfold, with minimal delay.</dd>
-      <dd class="example">“Real-time analytics of footfall patterns inform on-the-fly adjustments.”</dd>
-
-      <dt class="glossary-term">Universally</dt>
-      <dd class="definition">Applying across all relevant parties or contexts without exception.</dd>
-      <dd class="example">“Aim for universally ratified standards in arms-control agreements.”</dd>
-    </dl>
+        <h2 id="Y">Y</h2>
+        <dl>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Youth Ambassador" data-definition="A young person appointed to represent peer perspectives in awareness campaigns or policymaking." data-example="'Local youth ambassadors help destigmatize mental-health care in public awareness campaigns.'">Youth Ambassador</dt>
+          <dt class="glossary-term" data-bs-toggle="modal" data-bs-target="#termModal" data-term="Youth-Centric" data-definition="Designed around the needs, perspectives, and active participation of young people." data-example="'Develop youth-centric blended-finance instruments for green entrepreneurs.'">Youth-Centric</dt>
+        </dl>
+      </div>
+    </div>
   </div><!-- /.container -->
+
+  <!-- Term Modal -->
+  <div class="modal fade" id="termModal" tabindex="-1" aria-labelledby="termModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="termModalLabel">Term Definition</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-term" id="modalTerm"></p>
+          <p id="modalDefinition"></p>
+          <p class="example" id="modalExample"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Handle modal content
+    const termModal = document.getElementById('termModal')
+    termModal.addEventListener('show.bs.modal', event => {
+      const button = event.relatedTarget
+      const term = button.getAttribute('data-term')
+      const definition = button.getAttribute('data-definition')
+      const example = button.getAttribute('data-example')
+      
+      document.getElementById('modalTerm').textContent = term
+      document.getElementById('modalDefinition').textContent = definition
+      document.getElementById('modalExample').textContent = example
+    })
+  </script>
 </body>
 </html>
-
